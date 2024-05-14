@@ -1,0 +1,46 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<title>Pendaftaran</title>
+</head>
+
+<body>
+<h1>PENDAFTARAN</h1>
+<form>
+    <label>Masukkan Nama:</label>
+	<input type="text"  id="nama">
+	<br>
+	<label>Masukkan Kelas:</label>
+	<input type="text" id="kelas">
+	<br>
+	<label>Masukkan No. WA:</label>
+	<input type="number" id="wa">
+	<br>
+	<label>Tempat Lahir:</label>
+	<input type="text" id="tempat">
+	<br>
+	<label>Tanggal Lahir:</label>
+	<input type="date" id="ttl">
+	<br>
+	<button onclick="tampilkanHasil()">Login</button>
+</form>
+<script>
+function tampilkanHasil() {
+    var nama = document.getElementById("nama").value;
+	var kelas = document.getElementById("kelas").value;
+	var wa = document.getElementById("wa").value;
+	var tempat = document.getElementById("tempat").value;
+	var ttl = document.getElementById("ttl").value;
+	var date = new Date(ttl);
+	var options = { day: 'numeric', month: 'long', year: 'numeric' };
+	var tanggalString = date.toLocaleDateString('id-ID', options);
+	document.write("<h1>BIODATA</h1>");
+	document.write("<p>Nama : "+nama+"</p>");
+	document.write("<p>Kelas : "+kelas+"</p>");
+	document.write("<p>No. WA: "+wa+"</p>");	
+	document.write("<p>Tempat, Tanggal Lahir : "+tempat+", "+tanggalString+"</p>");
+}
+</script>
+</body>
+</html>

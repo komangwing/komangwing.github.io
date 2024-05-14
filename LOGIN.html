@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<title>LOGIN</title>
+</head>
+
+<body>
+<h1>LOGIN</h1>
+<form>
+    <label>Username:</label>
+	<input type="text"  id="username">
+	<br>
+	<label>Password:</label>
+	<input type="password" id="password">
+	<br>
+	<button onclick="tampilkanHasil()">Login</button>
+</form>
+<script language="JavaScript">
+function tampilkanHasil() {
+    var username = document.getElementById("username").value;
+	var password = document.getElementById("password").value;
+	if (username=="Ikomang" && password=="271107") {
+  alert("Selamat anda berhasil login");
+}
+    else {
+  alert("Username dan password anda salah!");
+}
+}
+</script>
+</body>
+</html>
